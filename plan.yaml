@@ -1,4 +1,4 @@
-# Server plan
+# Server plan 2
 apiVersion: upgrade.cattle.io/v1
 kind: Plan
 metadata:
@@ -6,6 +6,7 @@ metadata:
   namespace: system-upgrade
   labels:
     rke2-upgrade: server
+    app: test
 spec:
   concurrency: 1
   nodeSelector:
@@ -27,7 +28,7 @@ spec:
     image: rancher/rke2-upgrade
   version: v1.27.15+rke2r1
 ---
-# Agent plan
+# Agent plan 2
 apiVersion: upgrade.cattle.io/v1
 kind: Plan
 metadata:
@@ -36,7 +37,7 @@ metadata:
   labels:
     rke2-upgrade: agent
 spec:
-  concurrency: 2
+  concurrency: 1
   nodeSelector:
     matchExpressions:
       - {key: beta.kubernetes.io/os, operator: In, values: ["linux"]}
