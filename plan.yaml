@@ -3,7 +3,7 @@ apiVersion: upgrade.cattle.io/v1
 kind: Plan
 metadata:
   name: server-plan
-  namespace: system-upgrade
+  namespace: cattle-system
   labels:
     rke2-upgrade: server
     app: test
@@ -33,7 +33,7 @@ apiVersion: upgrade.cattle.io/v1
 kind: Plan
 metadata:
   name: agent-plan
-  namespace: system-upgrade
+  namespace: cattle-system
   labels:
     rke2-upgrade: agent
 spec:
