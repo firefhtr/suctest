@@ -37,7 +37,7 @@ spec:
   concurrency: 1
   nodeSelector:
     matchExpressions:
-      - {key: node-role.kubernetes.io/control-plane, operator: NotIn, values: ["true"]}
+      - {key: node-role.kubernetes.io/control-plane, operator: DoesNotExist}
   prepare:
     args:
     - prepare
